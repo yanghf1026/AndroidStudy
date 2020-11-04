@@ -1,0 +1,2 @@
+include ':app', ':headportrait', ':Fragment', ':Text', ':QQshuoshuo', ':ButtonTest', ':ImageButton', ':Singlechoice', ':Check', ':Date', ':Time', ':time'
+rootProject.name='bundle'
