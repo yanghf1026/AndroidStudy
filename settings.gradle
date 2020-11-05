@@ -1,2 +1,2 @@
-include ':app', ':headportrait', ':Fragment', ':Text', ':QQshuoshuo', ':ButtonTest', ':ImageButton', ':Singlechoice', ':Check', ':Date', ':Time', ':time', ':ActionAndData'
+include ':app', ':headportrait', ':Fragment', ':Text', ':QQshuoshuo', ':ButtonTest', ':ImageButton', ':Singlechoice', ':Check', ':Date', ':Time', ':time', ':ActionAndData', ':Category'
 rootProject.name='bundle'
