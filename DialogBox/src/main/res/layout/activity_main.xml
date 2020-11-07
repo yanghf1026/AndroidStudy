@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#38cfd1"
+        android:textSize="17sp"
+        android:layout_marginBottom="16dp"
+        android:text="显示带取消、确定按钮的对话框" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#3961b7"
+        android:textSize="17sp"
+        android:layout_marginBottom="16dp"
+        android:text="显示带列表的对话框" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#43b243"
+        android:textSize="17sp"
+        android:layout_marginBottom="16dp"
+        android:text="显示带单选列表项的对话框" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#f9671e"
+        android:textSize="17sp"
+        android:text="显示带多选列表项的对话框" />
+</LinearLayout>

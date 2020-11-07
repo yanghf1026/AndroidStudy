@@ -9,10 +9,9 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:context=".MainActivity">
+
     <ViewFlipper
         android:id="@+id/flipper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    </ViewFlipper>
+        android:layout_height="match_parent"></ViewFlipper>
 </RelativeLayout>
