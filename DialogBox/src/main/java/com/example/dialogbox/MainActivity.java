@@ -1,6 +1,11 @@
 package com.example.dialogbox;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,10 +13,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 public class MainActivity extends AppCompatActivity {
+    final int NOTIFYID = 0x123; //通知的ID
     private boolean[] checkedItems;//记录各列表项的状态
     private  String[] items;//各列表项要显示的内容
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,11 +128,47 @@ public class MainActivity extends AppCompatActivity {
                                     0,result.length() -1
                             );
                             Toast.makeText(MainActivity.this,"您选择了["+result+"]",Toast.LENGTH_LONG).show();
+                        }else {
+                            Toast.makeText(MainActivity.this,"原来您不喜欢玩游戏！",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
                 builder.create().show();
             }
         });
+        //获取通知管理器，用于发送通知
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        NotificationChannel notificationChannel = new NotificationChannel(
+                "channel_1", "143", NotificationManager.IMPORTANCE_DEFAULT
+        );
+        notificationManager.createNotificationChannel(notificationChannel);
+
+
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(
+                this,"channel_1"
+        );//创建一个Notification对象
+        //设置打开该通知，该通知自动消失
+        notification.setAutoCancel(true);
+        //设置通知的图标
+        notification.setSmallIcon(R.drawable.packet);
+        //设置通知内容的标题
+        notification.setContentTitle("奖励百万红包!!!!!");
+        //设置通知内容
+        notification.setContentText("点击查看详情！");
+        //设置使用系统默认的声音、默认的LED灯
+        notification.setDefaults(Notification.DEFAULT_ALL);
+        //设置发送的时间
+        notification.setWhen(System.currentTimeMillis());
+        //创建一个启动DetailActivity的Intent
+        Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(MainActivity.this,0,intent,PendingIntent.FLAG_CANCEL_CURRENT);
+
+
+        //设置通知栏跳转
+        notification.setContentIntent(pi);
+        //发送通知
+        notificationManager.notify(NOTIFYID,notification.build());
+
+
     }
 }

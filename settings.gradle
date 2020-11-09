@@ -1,2 +1,2 @@
-include ':app', ':headportrait', ':Fragment', ':Text', ':QQshuoshuo', ':ButtonTest', ':ImageButton', ':Singlechoice', ':Check', ':Date', ':Time', ':time', ':ActionAndData', ':Category', ':IntentFilter', ':Debug', ':PressTwice', ':LongPress', ':TouchEvent', ':Difference', ':GestureDecetion', ':Gestureaddition', ':DialogBox'
+include ':app', ':headportrait', ':Fragment', ':Text', ':QQshuoshuo', ':ButtonTest', ':ImageButton', ':Singlechoice', ':Check', ':Date', ':Time', ':time', ':ActionAndData', ':Category', ':IntentFilter', ':Debug', ':PressTwice', ':LongPress', ':TouchEvent', ':Difference', ':GestureDecetion', ':Gestureaddition', ':DialogBox', ':Broadcast'
 rootProject.name='bundle'
