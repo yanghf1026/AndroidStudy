@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private String mr = "mr",mrsoft = "mrsoft";//定义后台账号与密码
     private String username,password;//输入的账号和密码
-    private static String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -24,17 +24,17 @@ public class GrantActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String checked = "";//保存选中的值
-                if(checkBox1.isChecked()){
+                if (checkBox1.isChecked()) {
                     checked += checkBox1.getText().toString();
                 }
-                if(checkBox2.isChecked()){
+                if (checkBox2.isChecked()) {
                     checked += checkBox2.getText().toString();
                 }
-                if(checkBox3.isChecked()){
+                if (checkBox3.isChecked()) {
                     checked += checkBox3.getText().toString();
                 }
                 //显示被选中的复选框对应的信息
-                Toast.makeText(GrantActivity.this,checked,Toast.LENGTH_SHORT) .show();
+                Toast.makeText(GrantActivity.this, checked, Toast.LENGTH_SHORT).show();
             }
         });
     }
